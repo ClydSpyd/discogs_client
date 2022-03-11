@@ -1,0 +1,13 @@
+.container{
+  border:1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img.coverImg{
+  height:100px;
+  // width:100px;
+  border:1px solid chartreuse;
+}

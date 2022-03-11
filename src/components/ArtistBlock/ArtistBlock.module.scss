@@ -1,0 +1,154 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  img.mainPic{
+    height: 180px;
+  }
+
+  h4{
+    min-width: 700px;
+  }
+
+  .main{
+    min-width: 700px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .details{
+    display: flex;
+    min-width: 700px;
+
+    p.heading{
+      margin: 0;
+    }
+  }
+
+  .artistBio{
+    min-width: calc(100% - 200px);;
+    height: 180px;
+    margin-left: 10px;
+    .text{
+      display: flex;
+    }
+    p{
+      margin-top: 10px;
+    }
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 25px;
+    width: calc(100% - 10px);;
+    max-width: 550px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-align: left;
+  }
+
+
+  .loader{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      height: 100px;
+    }
+  }
+
+  .releases{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    h6.noReleases{
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+
+  p.heading{
+    text-align: left;
+    width:calc(100% - 50px);
+    border-bottom: 1px solid #ffffff;
+    padding: 8px;
+  }
+
+  .releaseBlock{
+    height:200px;
+    width:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    .coverPic,
+    .overlay{
+      height:100%;
+      width:100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .coverPic{
+      transition: .3s transform ease;
+      transform: scale(1);
+    }
+
+    .overlay{
+      background-color: grey;
+      opacity: .8;
+      transition: .5s opacity ease;
+      // border:1px solid chartreuse;
+    }
+
+    h5,
+    h6,
+    p{
+      position: relative;
+      z-index: 10;
+      margin: 5px 0;
+      color: #ffffff;
+      transition: .5s opacity ease;
+    }
+
+    h5{
+      font-size: 15px;
+      padding:0 15px
+    }
+
+    h6{
+      font-size: 13px;
+    }
+
+    &:hover{
+      .overlay,h5,h6,p{
+        opacity: 0;
+      }
+      .coverPic{
+        transform: scale(1.05);
+      }
+    }
+    
+  }
+}
